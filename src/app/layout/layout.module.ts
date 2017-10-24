@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header/header.component';
 import { PizzaMaterialModule } from '../pizza-material/pizza-material.module';
 
 @NgModule({
@@ -8,7 +7,6 @@ import { PizzaMaterialModule } from '../pizza-material/pizza-material.module';
     CommonModule,
     PizzaMaterialModule,
   ],
-  declarations: [HeaderComponent],
-  exports: [HeaderComponent, PizzaMaterialModule]
+  exports: [PizzaMaterialModule]
 })
 export class LayoutModule { }

@@ -1,6 +1,7 @@
 import 'rxjs/Rx'; // Used for rxjs operators like first.
 
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { RouterModule } from '@angular/router';
@@ -27,6 +28,7 @@ import { BasketPage } from './basket/basket.page';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(routes, { useHash: true }),
     StoreModule.provideStore(rootReducer, initialRootState),
     RouterStoreModule.connectRouter(),
