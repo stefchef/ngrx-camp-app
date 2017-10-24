@@ -81,6 +81,6 @@ export class InMemoryCategoryService implements InMemoryDbService {
             }
         ];
 
-        return categories;
+        return { categories };
     }
 }

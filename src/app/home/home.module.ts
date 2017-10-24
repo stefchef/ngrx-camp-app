@@ -11,6 +11,6 @@ import { CategoriesComponent } from './categories/categories.component';
     LayoutModule,
   ],
   declarations: [PizzasComponent, PizzaComponent, CategoriesComponent],
-  exports : [PizzasComponent, PizzaComponent]
+  exports : [PizzasComponent, PizzaComponent, CategoriesComponent]
 })
 export class HomeModule { }
