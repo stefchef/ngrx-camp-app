@@ -16,12 +16,14 @@ import { initialRootState } from './app.reducer';
 import { HomePage } from './home/home.page';
 import { HomeModule } from './home/home.module';
 import { LayoutModule, LayoutPage } from './layout';
+import { BasketPage } from './basket/basket.page';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutPage,
     HomePage,
+    BasketPage,
   ],
   imports: [
     BrowserModule,
