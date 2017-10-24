@@ -1,5 +1,8 @@
 <p>
   pizza works!
 </p>
-
-<app-pizza *ngFor='let pizza of pizzas' [pizza]="pizza"></app-pizza>
+<mat-grid-list cols="4" rowHeight="1:1">
+  <mat-grid-tile *ngFor='let pizza of pizzas'>
+    <app-pizza [pizza]="pizza"></app-pizza>
+  </mat-grid-tile>
+</mat-grid-list>
