@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { LayoutModule } from '../layout/layout.module';
 import { PizzasComponent } from './pizzas/pizzas.component';
 import { PizzaComponent } from './pizzas/pizza/pizza.component';
-import { MatGridListModule } from '@angular/material';
+import { MatGridListModule, MatCardModule } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
     LayoutModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule
   ],
   declarations: [PizzasComponent, PizzaComponent],
   exports : [PizzasComponent, PizzaComponent]
