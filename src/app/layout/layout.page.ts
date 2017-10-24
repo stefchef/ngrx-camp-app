@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { RootState } from '../app.state';
+import { BasketPosition } from '../basket/basket.state';
 
 @Component({
   selector: 'app-layout',
@@ -9,11 +10,16 @@ import { RootState } from '../app.state';
   styleUrls: ['./layout.page.scss']
 })
 export class LayoutPage implements OnInit {
-  basketItemCount: number;
+  basketItems: BasketPosition[];
+  get basketItemCount() {
+    let count = 0;
+    this.basketItems.forEach(a => count += a.quantity);
+    return count;
+  }
 
   constructor(private activatedRoute: ActivatedRoute, private store: Store<RootState>) {
     this.store.subscribe(s => {
-      this.basketItemCount = s.basketState.items.length;
+      this.basketItems = s.basketState.items;
     });
   }
 
