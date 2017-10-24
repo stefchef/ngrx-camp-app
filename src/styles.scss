@@ -8,7 +8,7 @@ body {
 
 .count-badge {
     font-size: 12px;
-    background: #ff0000;
+    background: #7F2040;
     color: #fff;
     padding: 0.1em;
     vertical-align: top;
@@ -20,5 +20,8 @@ body {
 .form-column {
     display: flex;
     flex-direction: column;
+  }
+  .is-active{
+      color:#ff4081 !important;
   }
   
