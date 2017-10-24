@@ -3,6 +3,7 @@ import { Actions } from '@ngrx/effects';
 import { compose } from '@ngrx/core';
 import { Action, Reducer, combineReducers } from '@ngrx/store';
 import { routerReducer } from '@ngrx/router-store';
+import { homeReducer } from './home/index';
 
 // we define the initial route state to point to our default route
 export const initialRootState = {
@@ -31,6 +32,7 @@ export function appReducer(state: AppState = initialAppState, action: Action): A
 const reducers = {
     router: routerReducer,
     appState: appReducer,
+    homeState: homeReducer
 };
 
 const ehancers = [
