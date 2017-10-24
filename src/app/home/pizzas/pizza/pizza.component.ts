@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Pizza } from './pizza.state';
-import {MatGridListModule} from '@angular/material';
 
 @Component({
   selector: 'app-pizza',

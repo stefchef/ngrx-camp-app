@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule, MatToolbarModule } from '@angular/material';
 import { HeaderComponent } from './header/header.component';
+import { PizzaMaterialModule } from '../pizza-material/pizza-material.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatToolbarModule,
-    MatButtonModule
+    PizzaMaterialModule,
   ],
   declarations: [HeaderComponent],
   exports: [HeaderComponent]
