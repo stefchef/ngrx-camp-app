@@ -1,15 +1,15 @@
 import { Pizza } from '../home/pizzas/pizza/index';
 
 export interface BasketState {
-    items: Pizza[];
+    items: BasketPosition[];
 }
 
 export const initialBasketState: BasketState = {
     items: []
 };
 
-export interface Product {
-    Id: string;
+export interface BasketPosition {
+    pizza: Pizza;
     quantity: number;
     name: string;
 }

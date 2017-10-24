@@ -3,6 +3,7 @@ import { RootState } from '../app.state';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { Pizza } from '../home/pizzas/pizza/pizza.state';
+import { BasketPosition } from './basket.state';
 
 @Component({
   selector: 'app-basket',
@@ -11,7 +12,7 @@ import { Pizza } from '../home/pizzas/pizza/pizza.state';
 })
 export class BasketPage implements OnInit {
 
-  basketItems: Pizza[];
+  basketItems: BasketPosition[];
 
   constructor(private store: Store<RootState>) {
     this.store.subscribe(s => {

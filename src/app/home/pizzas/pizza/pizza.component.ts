@@ -6,7 +6,6 @@ import { Observable } from 'rxjs/Observable';
 
 import { RootState } from '../../../app.state';
 import { AddToBasket } from '../../../basket/index';
-import { Product } from '../../../basket/basket.state';
 
 @Component({
   selector: 'app-pizza',
@@ -18,7 +17,7 @@ export class PizzaComponent implements OnInit {
 
   constructor(private store: Store<RootState>) { }
 
-  private AddToCart(pizzaToAdd: Product) {
+  private AddToCart(pizzaToAdd: Pizza) {
     this.store.dispatch(new AddToBasket(pizzaToAdd));
   }
 
