@@ -5,25 +5,30 @@
       <mat-list-item *ngFor="let position of basketItems">{{position.pizza.name}} | {{position.quantity}}</mat-list-item>
     </mat-list>
     <div>
-      <button mat-button matStepperNext [disabled]="basketItems.length==0">Next</button>
+      <button mat-button matStepperNext [disabled]="basketItems.length==0" color="primary">Next</button>
     </div>
   </mat-step>
   <mat-step label="Your delivery settings">
     <form class="form-column">
       <mat-form-field>
         <input matInput placeholder="Prename">
+        <mat-error>This field is required</mat-error>
       </mat-form-field>
       <mat-form-field>
         <input matInput placeholder="Surname">
+        <mat-error>This field is required</mat-error>
       </mat-form-field>
       <mat-form-field>
         <input matInput placeholder="Street and number">
+        <mat-error>This field is required</mat-error>
       </mat-form-field>
       <mat-form-field>
         <input matInput placeholder="Postal code">
+        <mat-error>This field is required</mat-error>
       </mat-form-field>
       <mat-form-field>
         <input matInput placeholder="City">
+        <mat-error>This field is required</mat-error>
       </mat-form-field>
 
       <mat-form-field>
@@ -39,20 +44,20 @@
       </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matStepperNext color="primary">Next</button>
       </div>
     </form>
   </mat-step>
   <mat-step label="Check your order">
     <div>
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matStepperNext color="primary">Next</button>
     </div>
   </mat-step>
   <mat-step label="Payment">
     <div>
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matStepperNext color="primary">Next</button>
     </div>
   </mat-step>
   <mat-step label="Order overview">
