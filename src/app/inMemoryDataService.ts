@@ -10,49 +10,57 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 id: '1',
                 name: 'Margherita',
                 imageUrl: 'http://www.dieci.ch/kurier/images/1.jpg',
-                description: 'no description'
+                description: 'no description',
+                categoryId: '1',
             },
             {
                 id: '2',
                 name: 'Stromboli',
                 imageUrl: 'http://www.dieci.ch/kurier/images/2.jpg',
-                description: 'no description'
+                description: 'no description',
+                categoryId: '1',
             },
             {
                 id: '3',
                 name: 'Napoli',
                 imageUrl: 'http://www.dieci.ch/kurier/images/3.jpg',
-                description: 'no description'
+                description: 'no description',
+                categoryId: '1',
             },
             {
                 id: '4',
                 name: 'Prosciutto',
                 imageUrl: 'http://www.dieci.ch/kurier/images/4.jpg',
-                description: 'no description'
+                description: 'no description',
+                categoryId: '1',
             },
             {
                 id: '5',
                 name: 'Funghi',
                 imageUrl: 'http://www.dieci.ch/kurier/images/5.jpg',
-                description: 'no description'
+                description: 'no description',
+                categoryId: '1',
             },
             {
                 id: '8',
                 name: 'Rustica',
                 imageUrl: 'http://www.dieci.ch/kurier/images/8.jpg',
-                description: 'no description'
+                description: 'no description',
+                categoryId: '1',
             },
             {
                 id: '9',
                 name: 'Salame',
                 imageUrl: 'http://www.dieci.ch/kurier/images/9.jpg',
-                description: 'no description'
+                description: 'no description',
+                categoryId: '1',
             },
             {
                 id: '10',
                 name: 'Beat',
                 imageUrl: 'http://www.bryan-albrecht.ch/beat.jpg',
-                description: 'no description'
+                description: 'no description',
+                categoryId: '1',
             }
         ];
 

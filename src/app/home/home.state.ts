@@ -5,7 +5,7 @@ export interface HomeState {
 }
 
 export const initialHomeState: HomeState = {
-    pizzas: []
+    pizzas: [],
 };
 
 export interface Category {
