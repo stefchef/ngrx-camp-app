@@ -16,6 +16,9 @@ import { initialRootState } from './app.reducer';
 import { HomePage } from './home/home.page';
 import { HomeModule } from './home/home.module';
 import { LayoutModule, LayoutPage } from './layout';
+import { environment } from '../environments/environment';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './inMemoryDataService';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { LayoutModule, LayoutPage } from './layout';
     RouterStoreModule.connectRouter(),
     EffectsModule.run(AppEffects),
     LayoutModule,
-    HomeModule
+    HomeModule,
+    ...environment.useInMemoryWebApi ? [InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 1000 })] : [],
   ],
   providers: [],
   bootstrap: [AppComponent]
