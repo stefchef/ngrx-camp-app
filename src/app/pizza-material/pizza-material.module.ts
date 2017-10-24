@@ -7,7 +7,13 @@ import {
   MatToolbarModule,
   MatSidenavModule,
   MatIconModule,
-  MatListModule
+  MatListModule,
+  MatStepperModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 } from '@angular/material';
 
 @NgModule({
@@ -20,6 +26,12 @@ import {
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   declarations: [],
   exports: [
@@ -30,6 +42,12 @@ import {
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ]
 })
 export class PizzaMaterialModule { }
