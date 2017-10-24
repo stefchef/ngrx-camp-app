@@ -1,4 +1,5 @@
-
+<p [hidden]="basketItems.length!=0" class="mat-typography">Your basket is empty</p>
 <mat-list>
   <mat-list-item *ngFor="let position of basketItems">{{position.pizza.name}} | {{position.quantity}}</mat-list-item>
 </mat-list>
+<button mat-button color="accent">Proceed to checkout<i class="material-icons">last_page</i></button>
