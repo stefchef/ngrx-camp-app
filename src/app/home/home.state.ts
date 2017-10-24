@@ -1,5 +1,5 @@
 import { Pizza } from './pizzas/pizza';
-import { Category } from './category';
+import { Category } from './categories';
 
 export interface HomeState {
     pizzas: Pizza[];
