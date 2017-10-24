@@ -8,11 +8,8 @@ export function basketReducer(state = initialBasketState, action: BasketActions)
     switch (action.type) {
         case ADD_TO_BASKET:
             const pizza = action.payload;
-            console.log(pizza);
             const existingPizza = state.items.length > 0 ? state.items.find(i => i.pizza.id === pizza.id) : null;
-            console.log(existingPizza);
             if (existingPizza) {
-                console.log('pizza exists');
                 existingPizza.quantity++;
                 return state;
             }
