@@ -1,5 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Pizza } from './pizza.state';
+import { MatGridListModule } from '@angular/material';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+
+import { RootState } from '../../../app.state';
+import { AddToBasket } from '../../../basket/index';
+import { Product } from '../../../basket/basket.state';
 
 @Component({
   selector: 'app-pizza',
@@ -9,7 +16,11 @@ import { Pizza } from './pizza.state';
 export class PizzaComponent implements OnInit {
   @Input() pizza: Pizza;
 
-  constructor() { }
+  constructor(private store: Store<RootState>) { }
+
+  private AddToCart(pizzaToAdd: Product) {
+    this.store.dispatch(new AddToBasket(pizzaToAdd));
+  }
 
   ngOnInit() {
   }
