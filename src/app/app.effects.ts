@@ -7,7 +7,7 @@ import { Action, Store } from '@ngrx/store';
 
 
 import { RootState } from './app.state';
-import { InMemoryDataService } from './inMemoryDataService';
+import { InMemoryPizzaService } from './inMemoryDataService';
 import { LoadPizzas } from './home/index';
 
 @Injectable()
@@ -17,7 +17,7 @@ export class AppEffects {
     loadPizzas$: Observable<Action> = this.store
         .first()
         .map(state => {
-            const service = new InMemoryDataService();
+            const service = new InMemoryPizzaService();
             const pizzas = service.createDb();
 
             return pizzas;

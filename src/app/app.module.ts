@@ -20,7 +20,7 @@ import { LayoutModule, LayoutPage } from './layout';
 import { BasketPage } from './basket/basket.page';
 import { environment } from '../environments/environment';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './inMemoryDataService';
+import { InMemoryPizzaService } from './inMemoryDataService';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { InMemoryDataService } from './inMemoryDataService';
     EffectsModule.run(AppEffects),
     LayoutModule,
     HomeModule,
-    ...environment.useInMemoryWebApi ? [InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 1000 })] : [],
+    ...environment.useInMemoryWebApi ? [InMemoryWebApiModule.forRoot(InMemoryPizzaService, { delay: 1000 })] : [],
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,6 +12,5 @@ export class LoadPizzas implements Action {
     }
 }
 
-
 export type HomeActions
     = LoadPizzas;

@@ -7,3 +7,8 @@ export interface HomeState {
 export const initialHomeState: HomeState = {
     pizzas: []
 };
+
+export interface Category {
+    name: string;
+    id: string;
+}
