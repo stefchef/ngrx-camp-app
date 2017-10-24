@@ -1,7 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 body {
     padding: 0em;
     margin: 0em;
+}
+
+.count-badge {
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0.1em;
+    vertical-align: top;
+    border-radius: 0.5em;
+    margin-left: -1em;
+    margin-top: -1em;
+    padding: 0 0.3em;
 }
