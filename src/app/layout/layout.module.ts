@@ -9,6 +9,6 @@ import { PizzaMaterialModule } from '../pizza-material/pizza-material.module';
     PizzaMaterialModule,
   ],
   declarations: [HeaderComponent],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent, PizzaMaterialModule]
 })
 export class LayoutModule { }
