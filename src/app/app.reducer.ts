@@ -3,7 +3,9 @@ import { Actions } from '@ngrx/effects';
 import { compose } from '@ngrx/core';
 import { Action, Reducer, combineReducers } from '@ngrx/store';
 import { routerReducer } from '@ngrx/router-store';
+
 import { homeReducer } from './home/index';
+import { basketReducer } from './basket/index';
 
 // we define the initial route state to point to our default route
 export const initialRootState = {
@@ -17,8 +19,6 @@ export const initialAppState = {
 };
 
 export function appReducer(state: AppState = initialAppState, action: Action): AppState {
-    console.log(state);
-
     switch (action.type) {
         case 'INCREMENT':
             return state;
@@ -32,7 +32,8 @@ export function appReducer(state: AppState = initialAppState, action: Action): A
 const reducers = {
     router: routerReducer,
     appState: appReducer,
-    homeState: homeReducer
+    homeState: homeReducer,
+    basketState: basketReducer,
 };
 
 const ehancers = [

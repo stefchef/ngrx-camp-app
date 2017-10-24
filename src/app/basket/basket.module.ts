@@ -7,6 +7,6 @@ import { PizzaMaterialModule } from '../pizza-material/pizza-material.module';
     CommonModule,
     PizzaMaterialModule,
   ],
-  exports: [PizzaMaterialModule]
+  declarations: []
 })
-export class LayoutModule { }
+export class BasketModule { }
