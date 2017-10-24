@@ -4,11 +4,10 @@ import { HomeActions, LOAD_PIZZA } from './home.actions';
 
 
 export function homeReducer(state = initialHomeState, action: HomeActions): HomeState {
-
-    console.log(state);
     switch (action.type) {
         case LOAD_PIZZA:
-            return state;
+            console.log('load pizza called');
+            return {...state, pizzas: action.payload};
         default:
             return state;
     }

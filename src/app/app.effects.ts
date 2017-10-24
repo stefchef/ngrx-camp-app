@@ -7,24 +7,22 @@ import { Action, Store } from '@ngrx/store';
 
 
 import { RootState } from './app.state';
-import { LoadNavigation } from './app.actions';
+import { InMemoryDataService } from './inMemoryDataService';
+import { LoadPizzas } from './home/index';
 
 @Injectable()
 export class AppEffects {
 
     @Effect()
-    loadNavigation$: Observable<Action> = this.store
+    loadPizzas$: Observable<Action> = this.store
         .first()
         .map(state => {
-            console.log(state.appState.navigationEntries);
-            if (state.appState.navigationEntries.length > 0) {
-                return [];
-            }
+            const service = new InMemoryDataService();
+            const pizzas = service.createDb();
 
-            return [
-            ];
+            return pizzas;
         })
-        .flatMap(actions => [new LoadNavigation()]);
+        .flatMap(actions => [new LoadPizzas(actions.pizzas)]);
 
 
     constructor(private actions$: Actions, private store: Store<RootState>, private titleService: Title) { }

@@ -2,7 +2,7 @@ import { Pizza } from './home/pizzas/pizza/index';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Observable } from 'rxjs/Observable';
 
-export class InMemoryDataService implements InMemoryDbService{
+export class InMemoryDataService implements InMemoryDbService {
     createDb() {
         const pizzas: Pizza[] = [
         {
