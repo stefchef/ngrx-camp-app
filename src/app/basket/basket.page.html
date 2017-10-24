@@ -1,5 +1,37 @@
-<p [hidden]="basketItems.length!=0" class="mat-typography">Your basket is empty</p>
-<mat-list>
-  <mat-list-item *ngFor="let position of basketItems">{{position.pizza.name}} | {{position.quantity}}</mat-list-item>
-</mat-list>
-<button mat-button color="accent">Proceed to checkout<i class="material-icons">last_page</i></button>
+<mat-vertical-stepper [linear]="true">
+    <mat-step label="Your Basket">
+        <p [hidden]="basketItems.length!=0" class="mat-typography">Your basket is empty</p>
+        <mat-list>
+          <mat-list-item *ngFor="let position of basketItems">{{position.pizza.name}} | {{position.quantity}}</mat-list-item>
+        </mat-list>
+        <div>
+            <button mat-button matStepperNext [disabled]="basketItems.length==0">Next</button>
+          </div>
+    </mat-step>
+    <mat-step label="Your delivery settings">
+        <div class="form-column">
+            <mat-form-field>
+              <input matInput placeholder="Input">
+            </mat-form-field>
+          
+            <mat-form-field>
+              <textarea matInput placeholder="Bemerkung"></textarea>
+            </mat-form-field>
+          
+            <mat-form-field>
+              <mat-select placeholder="Select">
+                <mat-option value="option">Option</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+    </mat-step>
+    <mat-step label="Check your order">
+
+    </mat-step>
+    <mat-step label="Payment">
+
+    </mat-step>
+    <mat-step label="Order overview">
+
+    </mat-step>
+  </mat-vertical-stepper>
