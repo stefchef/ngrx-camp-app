@@ -13,6 +13,8 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 imageUrl: '../assets/pizza/margarite.jpg',
                 description: 'no description',
                 categoryId: '1',
+                price: 10,
+                toppings: []
             },
             {
                 id: '2',
@@ -20,6 +22,8 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 imageUrl: '../assets/pizza/strumbolli.jpg',
                 description: 'no description',
                 categoryId: '1',
+                price: 10,
+                toppings: []
             },
             {
                 id: '3',
@@ -27,6 +31,8 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 imageUrl: '../assets/pizza/nepal.jpg',
                 description: 'no description',
                 categoryId: '1',
+                price: 10,
+                toppings: []
             },
             {
                 id: '4',
@@ -34,6 +40,8 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 imageUrl: '../assets/pizza/proschutt.jpg',
                 description: 'no description',
                 categoryId: '1',
+                price: 10,
+                toppings: []
             },
             {
                 id: '5',
@@ -41,6 +49,8 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 imageUrl: '../assets/pizza/funggi.jpg',
                 description: 'no description',
                 categoryId: '1',
+                price: 10,
+                toppings: []
             },
             {
                 id: '8',
@@ -48,6 +58,8 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 imageUrl: '../assets/pizza/rustikal.jpg',
                 description: 'no description',
                 categoryId: '1',
+                price: 10,
+                toppings: []
             },
             {
                 id: '9',
@@ -55,6 +67,8 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 imageUrl: '../assets/pizza/salamimimi.jpg',
                 description: 'no description',
                 categoryId: '1',
+                price: 10,
+                toppings: []
             },
             {
                 id: '10',
@@ -62,6 +76,17 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 imageUrl: '../assets/pizza/beat.jpg',
                 description: 'no description',
                 categoryId: '1',
+                price: 10,
+                toppings: []
+            },
+            {
+                id: '11',
+                name: 'Wunschpizza',
+                imageUrl: '../assets/pizza/beat.jpg',
+                description: 'no description',
+                categoryId: '2',
+                price: 10,
+                toppings: []
             }
         ];
 
