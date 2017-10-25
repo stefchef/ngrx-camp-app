@@ -12,6 +12,8 @@ export interface HomeState {
 export const initialHomeState: HomeState = {
     pizzas: [],
     categories: [],
-    customPizzaState: undefined,
+    customPizzaState: {
+        toppingOptions: [],
+    },
     selectedCategory: undefined,
 };

@@ -4,6 +4,7 @@ import { RootState } from '../app.state';
 import { Observable } from 'rxjs/Observable';
 import { Pizza } from './pizzas/pizza/index';
 import { Category } from './categories/index';
+import { CustomPizzaState } from './custompizza/custompizza.state';
 
 @Component({
   selector: 'app-home',
@@ -15,12 +16,14 @@ export class HomePage implements OnInit {
 
   pizzas$: Observable<Pizza[]>;
   categories$: Observable<Category[]>;
+  custompizzaState$: Observable<CustomPizzaState>;
   selectedCategory$: Observable<Category>;
 
   constructor(private store: Store<RootState>) {
     this.pizzas$ = this.store.select(s => s.homeState.pizzas);
     this.categories$ = this.store.select(s => s.homeState.categories);
     this.selectedCategory$ = this.store.select(s => s.homeState.selectedCategory);
+    this.custompizzaState$ = this.store.select(s => s.homeState.customPizzaState);
   }
 
   ngOnInit() {
