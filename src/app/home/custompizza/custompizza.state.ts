@@ -9,5 +9,6 @@ export interface CustomPizza {
 
 export interface Topping {
     name: string;
+    price: number;
     isDefault: boolean;
 }

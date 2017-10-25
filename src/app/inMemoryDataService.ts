@@ -116,34 +116,42 @@ export class InMemoryToppingService implements InMemoryDbService {
         const toppings: Topping[] = [
             {
                 name: 'Tomatosauce',
+                price: 0,
                 isDefault: true,
             },
             {
                 name: 'Mozarella',
+                price: 0,
                 isDefault: true,
             },
             {
                 name: 'Oregano',
+                price: 0,
                 isDefault: true,
             },
             {
                 name: 'Salami',
+                price: 0,
                 isDefault: false,
             },
             {
                 name: 'Hot Salami',
+                price: 0,
                 isDefault: false,
             },
             {
                 name: 'Bacon',
+                price: 0,
                 isDefault: false,
             },
             {
                 name: 'Ham',
+                price: 0,
                 isDefault: false,
             },
             {
                 name: 'Unidentified meat.',
+                price: 0,
                 isDefault: false,
             },
         ];
