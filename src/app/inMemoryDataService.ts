@@ -2,6 +2,7 @@ import { Pizza } from './home/pizzas/pizza/index';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Observable } from 'rxjs/Observable';
 import { Category } from './home/categories/index';
+import { Topping } from './home/custompizza/index';
 
 export class InMemoryPizzaService implements InMemoryDbService {
     createDb() {
@@ -84,3 +85,45 @@ export class InMemoryCategoryService implements InMemoryDbService {
         return { categories };
     }
 }
+
+export class InMemoryToppingService implements InMemoryDbService {
+    createDb() {
+        const toppings: Topping[] = [
+            {
+                name: 'Tomatosauce',
+                isDefault: true,
+            },
+            {
+                name: 'Mozarella',
+                isDefault: true,
+            },
+            {
+                name: 'Oregano',
+                isDefault: true,
+            },
+            {
+                name: 'Salami',
+                isDefault: false,
+            },
+            {
+                name: 'Hot Salami',
+                isDefault: false,
+            },
+            {
+                name: 'Bacon',
+                isDefault: false,
+            },
+            {
+                name: 'Ham',
+                isDefault: false,
+            },
+            {
+                name: 'Unidentified meat.',
+                isDefault: false,
+            },
+        ];
+
+        return { toppings };
+    }
+}
+

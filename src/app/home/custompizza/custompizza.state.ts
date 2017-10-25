@@ -1,3 +1,7 @@
+export interface CustomPizzaState {
+    toppingOptions: Topping[];
+}
+
 export interface CustomPizza {
     id: string;
     toppings: Topping[];

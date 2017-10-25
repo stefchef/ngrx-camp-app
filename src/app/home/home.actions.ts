@@ -1,6 +1,7 @@
 import { Action } from '@ngrx/store';
 import { Pizza } from './pizzas/pizza/pizza.state';
 import { Category } from './categories/index';
+import { Topping } from './custompizza/index';
 
 export const LOAD_PIZZA = 'home/LOAD_PIZZA';
 export class LoadPizzas implements Action {
@@ -22,6 +23,16 @@ export class LoadCategory implements Action {
     }
 }
 
+export const LOAD_TOPPINGS = 'home/LOAD_TOPPINGS';
+export class LoadToppings implements Action {
+    readonly type: string = LOAD_TOPPINGS;
+    payload?: any;
+
+    constructor(toppings: Topping[]) {
+        this.payload = toppings;
+    }
+}
+
 export const SELECT_CATEGORY = 'home/SELECT_CATEGORY';
 export class SelectCategory implements Action {
     readonly type: string = SELECT_CATEGORY;
@@ -32,6 +43,7 @@ export class SelectCategory implements Action {
     }
 }
 
-export type HomeActions
-    = LoadPizzas |
+export type HomeActions =
+    LoadPizzas |
+    LoadCategory |
     SelectCategory;

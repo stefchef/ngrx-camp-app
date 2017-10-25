@@ -5,10 +5,9 @@ import { Effect, Actions } from '@ngrx/effects';
 import { Observable } from 'rxjs/Observable';
 import { Action, Store } from '@ngrx/store';
 
-
 import { RootState } from './app.state';
-import { InMemoryPizzaService, InMemoryCategoryService } from './inMemoryDataService';
-import { LoadPizzas, LoadCategory } from './home/index';
+import { InMemoryPizzaService, InMemoryCategoryService, InMemoryToppingService } from './inMemoryDataService';
+import { LoadPizzas, LoadCategory, LoadToppings } from './home/index';
 
 @Injectable()
 export class AppEffects {
@@ -36,6 +35,18 @@ export class AppEffects {
             return categories;
         })
         .flatMap(actions => [new LoadCategory(actions.categories)]);
+
+    @Effect()
+    loadToppings$: Observable<Action> = this.store
+        .first()
+        .map(state => {
+            console.log('loading toppings...');
+            const service = new InMemoryToppingService();
+            const toppings = service.createDb();
+
+            return toppings;
+        })
+        .flatMap(actions => [new LoadToppings(actions.toppings)]);
 
 
     constructor(private actions$: Actions, private store: Store<RootState>, private titleService: Title) { }
