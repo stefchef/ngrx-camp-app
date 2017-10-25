@@ -15,10 +15,12 @@ export class HomePage implements OnInit {
 
   pizzas$: Observable<Pizza[]>;
   categories$: Observable<Category[]>;
+  selectedCategory$: Observable<Category>;
 
   constructor(private store: Store<RootState>) {
     this.pizzas$ = this.store.select(s => s.homeState.pizzas);
     this.categories$ = this.store.select(s => s.homeState.categories);
+    this.selectedCategory$ = this.store.select(s => s.homeState.selectedCategory);
   }
 
   ngOnInit() {

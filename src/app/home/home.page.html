@@ -1,4 +1,5 @@
 <div class="main-content">
     <app-categories [categories]="categories$ | async"></app-categories>
-    <app-pizzas [pizzas]="pizzas$ | async"> </app-pizzas>
+    <app-pizzas *ngIf="(selectedCategory$ | async) && (selectedCategory$ | async).id == 1"
+        [pizzas]="pizzas$ | async"> </app-pizzas>
 </div>

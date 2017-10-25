@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Category } from './categories.state';
 import { Store } from '@ngrx/store';
 import { RootState } from '../../app.state';
+import { SelectCategory } from '../home.actions';
 
 @Component({
   selector: 'app-categories',
@@ -14,7 +15,7 @@ export class CategoriesComponent implements OnInit {
   constructor(private store: Store<RootState>) { }
 
   selectItem(selectedCategoryId: string) {
-    console.log(selectedCategoryId);
+    this.store.dispatch(new SelectCategory(selectedCategoryId));
   }
 
   ngOnInit() {
