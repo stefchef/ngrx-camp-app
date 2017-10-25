@@ -1,7 +1,8 @@
 <section class="mat-typography">
     <mat-selection-list #toppings>
-        <mat-list-option *ngFor="let topping of custompizzaState.toppingOptions">
+        <mat-list-option *ngFor="let topping of custompizzaState.toppingOptions" [value]="topping">
           {{topping.name}}
         </mat-list-option>
       </mat-selection-list>
+      <button (click)="getPizza(toppings.selectedOptions.selected)">Lets go an get some Pizza!</button>
 </section>
