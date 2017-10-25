@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { RootState } from '../app.state';
 import { Observable } from 'rxjs/Observable';
@@ -11,6 +11,7 @@ import { Category } from './categories/index';
   styleUrls: ['./home.page.scss']
 })
 export class HomePage implements OnInit {
+  @HostBinding('class.page') true;
 
   pizzas$: Observable<Pizza[]>;
   categories$: Observable<Category[]>;

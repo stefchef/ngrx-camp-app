@@ -1,0 +1,10 @@
+app-categories {
+    flex: 1 100%;
+    flex-shrink: 5;
+    order: 1;
+}
+
+app-pizzas {
+    flex: 1 100%;
+    order: 2;
+}

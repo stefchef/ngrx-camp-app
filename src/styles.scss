@@ -17,11 +17,24 @@ body {
     margin-top: -1em;
     padding: 0 0.3em;
 }
+
 .form-column {
     display: flex;
     flex-direction: column;
-  }
-  .is-active{
-      color:#ff4081 !important;
-  }
-  
+}
+
+.is-active {
+    color: #ff4081 !important;
+}
+
+.page {
+    display: flex;
+    // align-items: flex-start;
+    flex-flow: row wrap;
+    // flex: 1;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+}
