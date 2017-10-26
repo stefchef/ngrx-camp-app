@@ -9,7 +9,7 @@ import { RootState } from './app.state';
 import { InMemoryPizzaService, InMemoryCategoryService, InMemoryToppingService } from './inMemoryDataService';
 import { LoadCategory } from './home/index';
 import { LoadPizzas } from './pizzas/pizzas.actions';
-import { LoadToppings } from './custom-pizza/custom-pizza.actions';
+import { LoadToppings, LoadCustomPizza } from './custom-pizza/custom-pizza.actions';
 
 @Injectable()
 export class AppEffects {
@@ -25,6 +25,22 @@ export class AppEffects {
             return pizzas;
         })
         .flatMap(actions => [new LoadPizzas(actions.pizzas)]);
+
+    @Effect()
+    loadCustomPizza$: Observable<Action> = this.store
+        .first()
+        .map(state => {
+            console.log('loading pizzas...');
+            const service = new InMemoryPizzaService();
+            const pizzas = service.getPizzasByCategoryId('2' /* Category 1 are all normal pizzas */);
+            if (pizzas.pizzas.length > 0)
+            {
+                return pizzas.pizzas[0];
+            }
+
+            return null;
+        })
+        .flatMap(actions => [new LoadCustomPizza(actions)]);
 
     @Effect()
     loadCatgories$: Observable<Action> = this.store
