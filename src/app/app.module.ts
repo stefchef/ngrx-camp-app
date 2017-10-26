@@ -23,6 +23,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryPizzaService } from './inMemoryDataService';
 import { PizzasPage } from './pizzas/pizzas.page';
 import { PizzasModule } from './pizzas/pizzas.module';
+import { CustomPizzaModule } from './custompizza/custom-pizza.module';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { PizzasModule } from './pizzas/pizzas.module';
     LayoutModule,
     HomeModule,
     PizzasModule,
+    CustomPizzaModule,
     ...environment.useInMemoryWebApi ? [InMemoryWebApiModule.forRoot(InMemoryPizzaService, { delay: 1000 })] : [],
   ],
   providers: [],

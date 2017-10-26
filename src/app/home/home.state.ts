@@ -1,13 +1,9 @@
 import { Category } from './categories';
-import { CustomPizzaState } from './custompizza/index';
 
 export interface HomeState {
-    customPizzaState: CustomPizzaState;
+    test: string;
 }
 
 export const initialHomeState: HomeState = {
-    customPizzaState: {
-        toppingOptions: [],
-        pizza: null,
-    }
+    test: ''
 };

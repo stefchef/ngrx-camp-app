@@ -7,6 +7,7 @@ import { routerReducer } from '@ngrx/router-store';
 import { homeReducer } from './home/index';
 import { basketReducer } from './basket/index';
 import { pizzasReducer } from './pizzas/index';
+import { customPizzaReducer } from './custompizza/customPizza.reducer';
 
 // we define the initial route state to point to our default route
 export const initialRootState = {
@@ -36,6 +37,7 @@ const reducers = {
     homeState: homeReducer,
     basketState: basketReducer,
     pizzasState: pizzasReducer,
+    customPizzaState: customPizzaReducer,
 };
 
 const ehancers = [

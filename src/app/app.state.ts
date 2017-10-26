@@ -2,6 +2,7 @@ import { RouterState } from '@ngrx/router-store';
 import { HomeState } from './home';
 import { BasketState } from './basket/basket.state';
 import { PizzasState } from './pizzas/pizzas.state';
+import { CustomPizzaState } from './custompizza';
 
 export interface RootState {
     appState: AppState;
@@ -9,6 +10,7 @@ export interface RootState {
     homeState: HomeState;
     basketState: BasketState;
     pizzasState: PizzasState;
+    customPizzaState: CustomPizzaState;
 }
 
 export interface AppState {

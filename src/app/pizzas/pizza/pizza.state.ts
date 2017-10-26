@@ -1,4 +1,4 @@
-import { Topping } from '../../home/custompizza/index';
+import { Topping } from '../../custompizza/index';
 
 export interface Pizza {
     imageUrl: string;

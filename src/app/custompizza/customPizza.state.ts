@@ -1,5 +1,4 @@
-import { Pizza } from '../../pizzas/pizza/index';
-
+import { Pizza } from '../pizzas/pizza/index';
 
 export interface CustomPizzaState {
     toppingOptions: Topping[];
@@ -11,3 +10,10 @@ export interface Topping {
     price: number;
     isDefault: boolean;
 }
+
+
+export const initialCustomPizzaState: CustomPizzaState = {
+        toppingOptions: [],
+        pizza: null,
+};
+
