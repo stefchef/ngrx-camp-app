@@ -6,6 +6,8 @@ import { Topping } from './custom-pizza/index';
 
 export class InMemoryPizzaService implements InMemoryDbService {
     createDb() {
+        const allToppings = new InMemoryToppingService().createDb().toppings;
+        console.log(allToppings);
         const pizzas: Pizza[] = [
             {
                 id: '1',
@@ -14,7 +16,7 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 description: 'The basic one',
                 categoryId: '1',
                 price: 10,
-                toppings: []
+                toppings: [allToppings[0], allToppings[1], allToppings[2]]
             },
             {
                 id: '2',
@@ -23,7 +25,7 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 description: 'Olives are great',
                 categoryId: '1',
                 price: 10,
-                toppings: []
+                toppings: [allToppings[0], allToppings[1], allToppings[2], allToppings[3], allToppings[5]]
             },
             {
                 id: '3',
@@ -32,7 +34,7 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 description: 'Ever been there?',
                 categoryId: '1',
                 price: 10,
-                toppings: []
+                toppings: [allToppings[0], allToppings[1], allToppings[2], allToppings[7]]
             },
             {
                 id: '4',
@@ -41,7 +43,7 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 description: 'The classic one',
                 categoryId: '1',
                 price: 10,
-                toppings: []
+                toppings: [allToppings[0], allToppings[1], allToppings[2], allToppings[6]]
             },
             {
                 id: '5',
@@ -50,7 +52,7 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 description: 'Yay shrooms',
                 categoryId: '1',
                 price: 10,
-                toppings: []
+                toppings: [allToppings[0], allToppings[1], allToppings[2], allToppings[5]]
             },
             {
                 id: '8',
@@ -59,7 +61,7 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 description: 'The old one',
                 categoryId: '1',
                 price: 10,
-                toppings: []
+                toppings: [allToppings[0], allToppings[1], allToppings[2], allToppings[4]]
             },
             {
                 id: '9',
@@ -68,7 +70,7 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 description: 'Salami aleikum',
                 categoryId: '1',
                 price: 10,
-                toppings: []
+                toppings: [allToppings[0], allToppings[1], allToppings[2], allToppings[3]]
             },
             {
                 id: '10',
@@ -77,7 +79,8 @@ export class InMemoryPizzaService implements InMemoryDbService {
                 description: 'Vodka',
                 categoryId: '1',
                 price: 10,
-                toppings: []
+                toppings: [allToppings[0], allToppings[1], allToppings[2], allToppings[3], allToppings[4]
+                , allToppings[5], allToppings[7], allToppings[7], allToppings[7], allToppings[7], allToppings[7], allToppings[7]]
             },
             {
                 id: '11',
