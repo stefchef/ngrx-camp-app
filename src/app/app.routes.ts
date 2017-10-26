@@ -4,6 +4,7 @@ import { LayoutPage } from './layout';
 
 import { homeRoutes } from './home/home.routes';
 import { basketRoutes } from './basket/basket.routes';
+import { pizzasRoutes } from './pizzas/pizzas.routes';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,6 +14,7 @@ export const routes: Routes = [
     children: [
       ...homeRoutes,
       ...basketRoutes,
+      ...pizzasRoutes,
     ]
   },
 ];

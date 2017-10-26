@@ -1,3 +1,5 @@
 <section class="mat-typography">
-    {{custompizzaState.toppingOptions}}
+    <mat-list>
+        <mat-list-item *ngFor="let position of custompizzaState.toppingOptions">{{position.name}}</mat-list-item>
+    </mat-list>
 </section>

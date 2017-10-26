@@ -21,6 +21,8 @@ import { BasketPage } from './basket/basket.page';
 import { environment } from '../environments/environment';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryPizzaService } from './inMemoryDataService';
+import { PizzasPage } from './pizzas/pizzas.page';
+import { PizzasModule } from './pizzas/pizzas.module';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { InMemoryPizzaService } from './inMemoryDataService';
     EffectsModule.run(AppEffects),
     LayoutModule,
     HomeModule,
+    PizzasModule,
     ...environment.useInMemoryWebApi ? [InMemoryWebApiModule.forRoot(InMemoryPizzaService, { delay: 1000 })] : [],
   ],
   providers: [],

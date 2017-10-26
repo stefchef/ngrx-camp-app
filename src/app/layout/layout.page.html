@@ -5,6 +5,14 @@
                 <mat-icon>home</mat-icon>
                 Home
             </a>
+            <a mat-list-item [routerLink]="['/pizzas']" [routerLinkActive]="['is-active']">
+                <mat-icon><i class="material-icons">local_pizza</i></mat-icon>
+                All pizzas
+            </a>
+            <a mat-list-item [routerLink]="['/custompizza']" [routerLinkActive]="['is-active']">
+                <mat-icon>build</mat-icon>
+                Build your pizza
+            </a>
             <a mat-list-item [routerLink]="['/basket']" [routerLinkActive]="['is-active']">
                 <mat-icon>shopping_cart</mat-icon>
                 <span class="count-badge">{{basketItemCount}}</span>

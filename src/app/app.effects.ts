@@ -7,7 +7,8 @@ import { Action, Store } from '@ngrx/store';
 
 import { RootState } from './app.state';
 import { InMemoryPizzaService, InMemoryCategoryService, InMemoryToppingService } from './inMemoryDataService';
-import { LoadPizzas, LoadCategory, LoadToppings } from './home/index';
+import { LoadCategory, LoadToppings } from './home/index';
+import { LoadPizzas } from './pizzas/pizzas.actions';
 
 @Injectable()
 export class AppEffects {
