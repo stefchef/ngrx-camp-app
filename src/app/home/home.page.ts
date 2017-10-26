@@ -4,7 +4,7 @@ import { RootState } from '../app.state';
 import { Observable } from 'rxjs/Observable';
 import { Pizza } from '../pizzas/pizza/index';
 import { Category } from './categories/index';
-import { CustomPizzaState } from '../custompizza/index';
+import { CustomPizzaState } from '../custom-pizza/index';
 
 @Component({
   selector: 'app-home',

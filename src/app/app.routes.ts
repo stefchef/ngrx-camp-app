@@ -5,7 +5,7 @@ import { LayoutPage } from './layout';
 import { homeRoutes } from './home/home.routes';
 import { basketRoutes } from './basket/basket.routes';
 import { pizzasRoutes } from './pizzas/pizzas.routes';
-import { customPizzaRoutes } from './custompizza/custom-pizza.routes';
+import { customPizzaRoutes } from './custom-pizza/custom-pizza.routes';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },

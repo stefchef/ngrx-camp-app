@@ -1,4 +1,4 @@
-import { Topping } from './custompizza.state';
+import { Topping } from './custom-pizza.state';
 import { Action } from '@ngrx/store';
 
 export const LOAD_TOPPINGS = 'customPizza/LOAD_TOPPINGS';

@@ -23,7 +23,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryPizzaService } from './inMemoryDataService';
 import { PizzasPage } from './pizzas/pizzas.page';
 import { PizzasModule } from './pizzas/pizzas.module';
-import { CustomPizzaModule } from './custompizza/custom-pizza.module';
+import { CustomPizzaModule } from './custom-pizza/custom-pizza.module';
 
 @NgModule({
   declarations: [

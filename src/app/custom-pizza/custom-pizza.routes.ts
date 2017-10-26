@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { CustomPizzaPage } from './custompizza.page';
+import { CustomPizzaPage } from './custom-pizza.page';
 
 export const customPizzaRoutes: Routes = [
     {
