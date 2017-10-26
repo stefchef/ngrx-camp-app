@@ -32,7 +32,7 @@ export class AppEffects {
         .map(state => {
             console.log('loading pizzas...');
             const service = new InMemoryPizzaService();
-            const pizzas = service.getPizzasByCategoryId('2' /* Category 1 are all normal pizzas */);
+            const pizzas = service.getPizzasByCategoryId('2' /* Category 2 are custom pizzas */);
             if (pizzas.pizzas.length > 0) {
                 return pizzas.pizzas[0];
             }
