@@ -2,7 +2,11 @@
   <mat-step label="Your Basket">
     <p [hidden]="basketItems.length!=0" class="mat-typography">Your basket is empty</p>
     <mat-list>
-      <mat-list-item *ngFor="let position of basketItems">{{position.pizza.name}} | {{position.quantity}}</mat-list-item>
+      <mat-list-item *ngFor="let position of basketItems">{{position.pizza.name}} | {{position.quantity}}
+        <mat-chip-list>
+          <mat-chip *ngFor="let topping of position.pizza.toppings">{{topping.name}}</mat-chip>
+        </mat-chip-list>
+      </mat-list-item>
     </mat-list>
     <div>
       <button mat-button matStepperNext [disabled]="basketItems.length===0" color="primary">Next</button>
