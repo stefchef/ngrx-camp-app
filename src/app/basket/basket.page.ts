@@ -23,7 +23,7 @@ export class BasketPage implements OnInit {
     this.store.subscribe(s => {
       this.basketItems = s.basketState.items;
     });
-    this.basketDataSource = new BasketDataSource(store);
+    this.basketDataSource = new BasketDataSource(this.basketItems);
     const t = <SomeState>{};
   }
 
@@ -33,9 +33,9 @@ export class BasketPage implements OnInit {
 }
 export class BasketDataSource extends DataSource<any> {
   basketItems$: Observable<BasketPosition[]>;
-  constructor(private store: Store<RootState>) {
+  constructor(private basketItems: BasketPosition[]) {
     super();
-    this.basketItems$ = this.store.select(a => a.basketState.items);
+    this.basketItems$ = Observable.of(basketItems);
   }
   connect(collectionViewer: CollectionViewer): Observable<BasketPosition[]> {
     return this.basketItems$;
