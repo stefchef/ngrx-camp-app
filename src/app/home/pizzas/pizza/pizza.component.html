@@ -2,13 +2,13 @@
   <mat-card-header>
     <mat-card-title>{{pizza.name}}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image src="{{pizza.imageUrl}}">
+  <img class="pizza-image" mat-card-image src="{{pizza.imageUrl}}">
   <mat-card-content>
     <p>
       {{pizza.description}}
     </p>
   </mat-card-content>
-  <mat-card-actions>
+  <mat-card-actions class="add-button">
     <button mat-button (click)="AddToCart(pizza)">
       <i class="material-icons">add_shopping_cart</i>
     </button>
