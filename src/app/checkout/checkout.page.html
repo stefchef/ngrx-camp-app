@@ -1,23 +1,20 @@
 <mat-horizontal-stepper>
   <mat-step label="Your Basket">
-    <div>
-      <button mat-button matStepperNext color="primary">Next</button>
-    </div>
+    <app-basket></app-basket>
   </mat-step>
   <mat-step label="Your delivery settings">
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext color="primary">Next</button>
+    <app-delivery-settings></app-delivery-settings>
   </mat-step>
   <mat-step label="Check your order">
     <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext color="primary">Next</button>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext color="primary">Next</button>
     </div>
   </mat-step>
   <mat-step label="Payment">
     <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext color="primary">Next</button>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext color="primary">Next</button>
     </div>
   </mat-step>
   <mat-step label="Order overview">
