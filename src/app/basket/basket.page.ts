@@ -5,6 +5,8 @@ import { Observable } from 'rxjs/Observable';
 import { Pizza } from '../pizzas/pizza/pizza.state';
 import { BasketPosition } from './basket.state';
 import { SomeState } from './delivery-settings/delivery-settings.state';
+import { DataSource } from '@angular/cdk/table';
+import { CollectionViewer } from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-basket',
@@ -15,16 +17,30 @@ export class BasketPage implements OnInit {
   @HostBinding('class.page') true;
 
   basketItems: BasketPosition[];
-
+  basketDataSource: BasketDataSource;
+  columns = ['name', 'quantity'];
   constructor(private store: Store<RootState>) {
     this.store.subscribe(s => {
       this.basketItems = s.basketState.items;
     });
-
+    this.basketDataSource = new BasketDataSource(store);
     const t = <SomeState>{};
   }
 
   ngOnInit() {
+  }
+
+}
+export class BasketDataSource extends DataSource<any> {
+  basketItems$: Observable<BasketPosition[]>;
+  constructor(private store: Store<RootState>) {
+    super();
+    this.basketItems$ = this.store.select(a => a.basketState.items);
+  }
+  connect(collectionViewer: CollectionViewer): Observable<BasketPosition[]> {
+    return this.basketItems$;
+  }
+  disconnect(collectionViewer: CollectionViewer): void {
   }
 
 }

@@ -14,7 +14,8 @@ import {
   MatSelectModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatChipsModule
+  MatChipsModule,
+  MatTableModule
 } from '@angular/material';
 
 @NgModule({
@@ -34,6 +35,7 @@ import {
     MatDatepickerModule,
     MatNativeDateModule,
     MatChipsModule,
+    MatTableModule,
   ],
   declarations: [],
   exports: [
@@ -51,6 +53,7 @@ import {
     MatDatepickerModule,
     MatNativeDateModule,
     MatChipsModule,
+    MatTableModule,
   ]
 })
 export class PizzaMaterialModule { }

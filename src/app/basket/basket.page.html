@@ -1,32 +1,14 @@
-<mat-horizontal-stepper>
-  <mat-step label="Your Basket">
-    <p [hidden]="basketItems.length!=0" class="mat-typography">Your basket is empty</p>
-    <mat-list>
-      <mat-list-item *ngFor="let position of basketItems">{{position.pizza.name}} | {{position.quantity}}
-        <mat-chip-list>
-          <mat-chip *ngFor="let topping of position.pizza.toppings">{{topping.name}}</mat-chip>
-        </mat-chip-list>
-      </mat-list-item>
-    </mat-list>
-    <div>
-      <button mat-button matStepperNext [disabled]="basketItems.length===0" color="primary">Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="Your delivery settings">
-    <app-delivery-settings></app-delivery-settings>
-  </mat-step>
-  <mat-step label="Check your order">
-    <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext color="primary">Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="Payment">
-    <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext color="primary">Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="Order overview">
-  </mat-step>
-</mat-horizontal-stepper>
+<div class="table-container">
+  <mat-table #table [dataSource]="basketDataSource">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Pizza </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.pizza.name}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="quantity">
+      <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.quantity}} </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columns;"></mat-row>
+  </mat-table>
+</div>

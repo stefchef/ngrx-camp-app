@@ -1,6 +1,5 @@
 import { Pizza } from './pizzas/pizza/index';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Observable } from 'rxjs/Observable';
 import { Category } from './home/categories/index';
 import { Topping } from './custom-pizza/index';
 
