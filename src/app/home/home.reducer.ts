@@ -11,7 +11,7 @@ export function homeReducer(state = initialHomeState, action: HomeActions): Home
             return { ...state, customPizzaState: { ...state.customPizzaState, toppingOptions: action.payload } };
         case SELECT_CATEGORY:
             const selectedCategory = state.categories.find(c => c.id === action.payload);
-            return { ...state, selectedCategory: selectedCategory };
+            return { ...state, selectedCategoryId: selectedCategory.id };
         default:
             return state;
     }

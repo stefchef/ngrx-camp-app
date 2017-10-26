@@ -34,4 +34,5 @@ export class SelectCategory implements Action {
 
 export type HomeActions =
     LoadCategory |
+    LoadToppings |
     SelectCategory;
