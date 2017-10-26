@@ -6,7 +6,7 @@ export interface HomeState {
     pizzas: Pizza[];
     categories: Category[];
     customPizzaState: CustomPizzaState;
-    selectedCategory: Category;
+    selectedCategoryId: string;
 }
 
 export const initialHomeState: HomeState = {
@@ -15,5 +15,5 @@ export const initialHomeState: HomeState = {
     customPizzaState: {
         toppingOptions: [],
     },
-    selectedCategory: undefined,
+    selectedCategoryId: '1',
 };
