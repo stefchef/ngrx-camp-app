@@ -17,20 +17,19 @@ import { initialRootState } from './app.reducer';
 import { HomePage } from './home/home.page';
 import { HomeModule } from './home/home.module';
 import { LayoutModule, LayoutPage } from './layout';
-import { BasketPage } from './basket/basket.page';
 import { environment } from '../environments/environment';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryPizzaService } from './inMemoryDataService';
-import { PizzasPage } from './pizzas/pizzas.page';
+
 import { PizzasModule } from './pizzas/pizzas.module';
 import { CustomPizzaModule } from './custom-pizza/custom-pizza.module';
+import { BasketModule } from './basket/basket.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutPage,
     HomePage,
-    BasketPage,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +42,7 @@ import { CustomPizzaModule } from './custom-pizza/custom-pizza.module';
     HomeModule,
     PizzasModule,
     CustomPizzaModule,
+    BasketModule,
     ...environment.useInMemoryWebApi ? [InMemoryWebApiModule.forRoot(InMemoryPizzaService, { delay: 1000 })] : [],
   ],
   providers: [],

@@ -13,44 +13,7 @@
     </div>
   </mat-step>
   <mat-step label="Your delivery settings">
-    <div class="form-column">
-      <mat-form-field>
-        <input matInput placeholder="Prename">
-        <mat-error>This field is required</mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Surname">
-        <mat-error>This field is required</mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Street and number">
-        <mat-error>This field is required</mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Postal code">
-        <mat-error>This field is required</mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="City">
-        <mat-error>This field is required</mat-error>
-      </mat-form-field>
-
-      <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-
-      <mat-form-field>
-        <mat-select placeholder="Select">
-          <mat-option value="option">Option</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext color="primary">Next</button>
-      </div>
-    </div>
+    <app-delivery-settings></app-delivery-settings>
   </mat-step>
   <mat-step label="Check your order">
     <div>
