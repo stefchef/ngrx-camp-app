@@ -1,7 +1,10 @@
-<div class="main-content">
-    <app-categories [categories]="categories$ | async"></app-categories>
-    <app-pizzas *ngIf="(selectedCategoryId$ | async) === '1'"
-        [pizzas]="pizzas$ | async"> </app-pizzas>
-    <app-custompizza *ngIf="(selectedCategoryId$ | async) === '2'"
-        [custompizzaState]="custompizzaState$ | async"></app-custompizza>
+<div>
+    <h1 class="mat-display-1">Bupedibapedi</h1>
+    <p class="mat-typography">Welcome ah, to the super pizza shop ah.</p>
+    <p class="mat-typography">Inne this pizza shoppe you can buy your all pizzas you desire ah.</p>
+    <p class="mat-typography">You can even configure your dream pizza with toppings and build a skyscraper out of pizza ah.</p>
+    <p class="mat-typography">Isn't that great?</p>
+    <p class="mat-typography">Enjoy our virtual delivered pizzas!</p>
+    <p class="mat-typography">Your pizza chez chef team</p>
+    <img src="../../assets/pizzachef.jpg" />
 </div>

@@ -1,8 +1,8 @@
-import { Pizza } from './home/pizzas/pizza/index';
+import { Pizza } from './pizzas/pizza/index';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Observable } from 'rxjs/Observable';
 import { Category } from './home/categories/index';
-import { Topping } from './home/custompizza/index';
+import { Topping } from './custompizza/index';
 
 export class InMemoryPizzaService implements InMemoryDbService {
     createDb() {

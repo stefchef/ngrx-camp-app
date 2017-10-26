@@ -4,8 +4,8 @@ import { MatGridListModule } from '@angular/material';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 
-import { RootState } from '../../../app.state';
-import { AddToBasket } from '../../../basket/index';
+import { RootState } from '../../app.state';
+import { AddToBasket } from '../../basket/index';
 
 @Component({
   selector: 'app-pizza',

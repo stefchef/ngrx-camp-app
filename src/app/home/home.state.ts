@@ -1,15 +1,11 @@
-import { Pizza } from './pizzas/pizza';
 import { Category } from './categories';
-import { CustomPizzaState } from './custompizza/index';
 
 export interface HomeState {
-    pizzas: Pizza[];
-    categories: Category[];
-    customPizzaState: CustomPizzaState;
-    selectedCategoryId: string;
+    test: string;
 }
 
 export const initialHomeState: HomeState = {
+<<<<<<< HEAD
     pizzas: [],
     categories: [],
     customPizzaState: {
@@ -17,4 +13,7 @@ export const initialHomeState: HomeState = {
         pizza: null,
     },
     selectedCategoryId: '1',
+=======
+    test: ''
+>>>>>>> 2a69fb88e14404691b1f1da00845b5c260e5f2b9
 };
