@@ -1,7 +1,7 @@
 <div class="main-content">
     <app-categories [categories]="categories$ | async"></app-categories>
-    <app-pizzas *ngIf="(selectedCategory$ | async) && (selectedCategory$ | async).id === '1'"
+    <app-pizzas *ngIf="(selectedCategoryId$ | async) === '1'"
         [pizzas]="pizzas$ | async"> </app-pizzas>
-    <app-custompizza *ngIf="(selectedCategory$ | async) && (selectedCategory$ | async).id === '2'"
+    <app-custompizza *ngIf="(selectedCategoryId$ | async) === '2'"
         [custompizzaState]="custompizzaState$ | async"></app-custompizza>
 </div>
