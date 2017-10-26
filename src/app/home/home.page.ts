@@ -19,8 +19,6 @@ export class HomePage implements OnInit {
   selectedCategoryId$: Observable<string>;
 
   constructor(private store: Store<RootState>) {
-    this.categories$ = this.store.select(s => s.homeState.categories);
-    this.selectedCategoryId$ = this.store.select(s => s.homeState.selectedCategoryId);
     this.custompizzaState$ = this.store.select(s => s.homeState.customPizzaState);
   }
 
