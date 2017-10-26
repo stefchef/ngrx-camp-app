@@ -4,5 +4,8 @@
           {{topping.name}}
         </mat-list-option>
       </mat-selection-list>
-      <button mat-button (click)="getPizza(toppings.selectedOptions.selected)">Lets go and get some Pizza!</button>
+      <button mat-button (click)="getPizza(toppings.selectedOptions.selected)">
+          Add to cart
+          <i class="material-icons">add_shopping_cart</i>
+        </button>
 </section>
