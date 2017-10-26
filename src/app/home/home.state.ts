@@ -14,6 +14,7 @@ export const initialHomeState: HomeState = {
     categories: [],
     customPizzaState: {
         toppingOptions: [],
+        pizza: null,
     },
     selectedCategoryId: '1',
 };
