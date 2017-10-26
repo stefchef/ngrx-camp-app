@@ -92,6 +92,12 @@ export class InMemoryPizzaService implements InMemoryDbService {
 
         return { pizzas };
     }
+
+    getPizzasByCategoryId(categoryId: string) {
+        const pizzas = this.createDb().pizzas.filter(p => p.categoryId === categoryId);
+
+        return { pizzas };
+    }
 }
 
 export class InMemoryCategoryService implements InMemoryDbService {
@@ -150,7 +156,7 @@ export class InMemoryToppingService implements InMemoryDbService {
                 isDefault: false,
             },
             {
-                name: 'Unidentified meat.',
+                name: 'Unidentified meat',
                 price: 0,
                 isDefault: false,
             },

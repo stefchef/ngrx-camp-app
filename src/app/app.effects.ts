@@ -20,7 +20,7 @@ export class AppEffects {
         .map(state => {
             console.log('loading pizzas...');
             const service = new InMemoryPizzaService();
-            const pizzas = service.createDb();
+            const pizzas = service.getPizzasByCategoryId('1' /* Category 1 are all normal pizzas */);
 
             return pizzas;
         })
