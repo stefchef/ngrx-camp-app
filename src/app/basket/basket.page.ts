@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { RootState } from '../app.state';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
@@ -12,6 +12,7 @@ import { SomeState } from './delivery-settings/delivery-settings.state';
   styleUrls: ['./basket.page.scss']
 })
 export class BasketPage implements OnInit {
+  @HostBinding('class.page') true;
 
   basketItems: BasketPosition[];
 
