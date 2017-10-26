@@ -17,12 +17,12 @@ export class HomePage implements OnInit {
   pizzas$: Observable<Pizza[]>;
   categories$: Observable<Category[]>;
   custompizzaState$: Observable<CustomPizzaState>;
-  selectedCategory$: Observable<Category>;
+  selectedCategoryId$: Observable<string>;
 
   constructor(private store: Store<RootState>) {
     this.pizzas$ = this.store.select(s => s.homeState.pizzas);
     this.categories$ = this.store.select(s => s.homeState.categories);
-    this.selectedCategory$ = this.store.select(s => s.homeState.selectedCategory);
+    this.selectedCategoryId$ = this.store.select(s => s.homeState.selectedCategoryId);
     this.custompizzaState$ = this.store.select(s => s.homeState.customPizzaState);
   }
 

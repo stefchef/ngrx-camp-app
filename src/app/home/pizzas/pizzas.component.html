@@ -1,5 +1,5 @@
 <mat-grid-list cols="4" rowHeight="1:1">
-  <mat-grid-tile *ngFor='let pizza of pizzas'>
+  <mat-grid-tile *ngFor='let pizza of pizzasInFocus'>
     <app-pizza [pizza]="pizza"></app-pizza>
   </mat-grid-tile>
 </mat-grid-list>

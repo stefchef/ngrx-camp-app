@@ -46,4 +46,5 @@ export class SelectCategory implements Action {
 export type HomeActions =
     LoadPizzas |
     LoadCategory |
+    LoadToppings |
     SelectCategory;
