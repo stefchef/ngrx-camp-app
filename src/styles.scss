@@ -29,12 +29,7 @@ body {
 
 .page {
     display: flex;
-    // align-items: flex-start;
+    align-items: flex-start;
     flex-flow: row wrap;
-    // flex: 1;
-}
-
-.main-content {
     flex: 1;
-    display: flex;
 }

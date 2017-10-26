@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
 import { Pizza } from './pizza/index';
 import { RootState } from '../app.state';
 import { Store } from '@ngrx/store';
@@ -9,6 +9,8 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./pizzas.page.scss']
 })
 export class PizzasPage implements OnInit {
+  @HostBinding('class.page') true;
+
   pizzas: Pizza[];
 
   constructor(private store: Store<RootState>) {
