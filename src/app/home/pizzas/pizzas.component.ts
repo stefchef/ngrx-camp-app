@@ -10,8 +10,7 @@ export class PizzasComponent implements OnInit {
   @Input() pizzas: Pizza[];
   pizzasInFocus: Pizza[];
 
-  constructor() {
-   }
+  constructor() { }
 
   ngOnInit() {
     this.pizzasInFocus = this.pizzas.filter(p => p.categoryId === '1');

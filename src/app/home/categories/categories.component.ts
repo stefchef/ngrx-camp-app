@@ -3,6 +3,7 @@ import { Category } from './categories.state';
 import { Store } from '@ngrx/store';
 import { RootState } from '../../app.state';
 import { SelectCategory } from '../home.actions';
+import { Pizza } from '../pizzas/pizza/index';
 
 @Component({
   selector: 'app-categories',
@@ -11,6 +12,7 @@ import { SelectCategory } from '../home.actions';
 })
 export class CategoriesComponent implements OnInit {
   @Input() categories: Category;
+  @Input() customPizza: Pizza;
 
   constructor(private store: Store<RootState>) { }
 
@@ -20,5 +22,4 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
