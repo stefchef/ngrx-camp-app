@@ -9,7 +9,7 @@ import { RootState } from './app.state';
 import { InMemoryPizzaService, InMemoryCategoryService, InMemoryToppingService } from './inMemoryDataService';
 import { LoadCategory } from './home/index';
 import { LoadPizzas } from './pizzas/pizzas.actions';
-import { LoadToppings } from './custom-pizza/custom-Pizza.actions';
+import { LoadToppings } from './custom-pizza/custom-pizza.actions';
 
 @Injectable()
 export class AppEffects {
