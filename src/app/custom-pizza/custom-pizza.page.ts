@@ -23,7 +23,7 @@ export class CustomPizzaPage implements OnInit {
     this.snackBarRef = snackBar;
   }
 
-  getPizza(options: MatListOption[]) {
+  addCustomPizzaToCart(options: MatListOption[]) {
     const toppings = <Topping[]>options.map(m => m.value);
     const pizza = { ...this.custompizzaState.pizza };
     pizza.toppings = toppings;
