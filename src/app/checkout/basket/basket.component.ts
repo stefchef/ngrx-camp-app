@@ -1,13 +1,13 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { RootState } from '../app.state';
+import { RootState } from '../../app.state';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import { Pizza } from '../pizzas/pizza/pizza.state';
+import { Pizza } from '../../pizzas/pizza/pizza.state';
 import { BasketPosition } from './basket.state';
 import { SomeState } from './delivery-settings/delivery-settings.state';
 import { DataSource } from '@angular/cdk/table';
 import { CollectionViewer } from '@angular/cdk/collections';
-import { Topping } from '../custom-pizza/index';
+import { Topping } from '../../custom-pizza/index';
 
 @Component({
   selector: 'app-basket',

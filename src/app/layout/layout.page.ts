@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { RootState } from '../app.state';
-import { BasketPosition } from '../basket/basket.state';
+import { BasketPosition } from '../checkout/basket/basket.state';
 
 @Component({
   selector: 'app-layout',

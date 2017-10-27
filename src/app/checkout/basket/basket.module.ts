@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PizzaMaterialModule } from '../pizza-material/pizza-material.module';
 import { DeliverySettingsComponent } from './delivery-settings/delivery-settings.component';
 import { BasketComponent } from './basket.component';
+import { PizzaMaterialModule } from '../../pizza-material/pizza-material.module';
 
 @NgModule({
   imports: [

@@ -3,8 +3,8 @@ import { Store } from '@ngrx/store';
 import { CustomPizzaState, Topping } from './custom-pizza.state';
 import { MatListOption } from '@angular/material';
 import { RootState } from '../app.state';
-import { AddToBasket } from '../basket/index';
 import { Pizza } from '../pizzas/pizza/index';
+import { AddToBasket } from '../checkout/basket/index';
 
 @Component({
   selector: 'app-custom-pizza',

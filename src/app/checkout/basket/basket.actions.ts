@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Pizza } from '../pizzas/pizza/index';
+import { Pizza } from '../../pizzas/pizza/index';
 
 export const ADD_TO_BASKET = 'basket/ADD_TO_BASKET';
 

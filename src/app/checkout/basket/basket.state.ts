@@ -1,4 +1,5 @@
-import { Pizza } from '../pizzas/pizza/index';
+import { Pizza } from '../../pizzas/pizza/index';
+
 
 export interface BasketState {
     items: BasketPosition[];

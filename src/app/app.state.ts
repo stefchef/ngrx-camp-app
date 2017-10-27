@@ -1,8 +1,8 @@
 import { RouterState } from '@ngrx/router-store';
 import { HomeState } from './home';
-import { BasketState } from './basket/basket.state';
 import { PizzasState } from './pizzas/pizzas.state';
 import { CustomPizzaState } from './custom-pizza';
+import { BasketState } from './checkout/basket/basket.state';
 
 export interface RootState {
     appState: AppState;

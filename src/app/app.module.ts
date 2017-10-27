@@ -23,8 +23,8 @@ import { InMemoryPizzaService } from './inMemoryDataService';
 
 import { PizzasModule } from './pizzas/pizzas.module';
 import { CustomPizzaModule } from './custom-pizza/custom-pizza.module';
-import { BasketModule } from './basket/basket.module';
 import { CheckoutModule } from './checkout/checkout.module';
+import { BasketModule } from './checkout/basket/basket.module';
 
 @NgModule({
   declarations: [

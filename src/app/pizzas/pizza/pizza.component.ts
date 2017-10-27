@@ -4,7 +4,7 @@ import { MatGridListModule } from '@angular/material';
 import { Store } from '@ngrx/store';
 
 import { RootState } from '../../app.state';
-import { AddToBasket } from '../../basket/index';
+import { AddToBasket } from '../../checkout/basket/index';
 
 @Component({
   selector: 'app-pizza',
