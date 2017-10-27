@@ -4,7 +4,6 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { Pizza } from '../../pizzas/pizza/pizza.state';
 import { BasketPosition } from './basket.state';
-import { SomeState } from './delivery-settings/delivery-settings.state';
 import { DataSource } from '@angular/cdk/table';
 import { CollectionViewer } from '@angular/cdk/collections';
 import { Topping } from '../../custom-pizza/index';
@@ -25,7 +24,6 @@ export class BasketComponent implements OnInit {
       this.basketItems = s.basketState.items;
     });
     this.basketDataSource = new BasketDataSource(this.basketItems);
-    const t = <SomeState>{};
   }
 
   ngOnInit() {

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DeliverySettingsComponent } from './delivery-settings/delivery-settings.component';
 import { BasketComponent } from './basket.component';
 import { PizzaMaterialModule } from '../../pizza-material/pizza-material.module';
 
@@ -9,7 +8,7 @@ import { PizzaMaterialModule } from '../../pizza-material/pizza-material.module'
     CommonModule,
     PizzaMaterialModule,
   ],
-  declarations: [BasketComponent, DeliverySettingsComponent],
-  exports: [BasketComponent, DeliverySettingsComponent]
+  declarations: [BasketComponent],
+  exports: [BasketComponent]
 })
 export class BasketModule { }
