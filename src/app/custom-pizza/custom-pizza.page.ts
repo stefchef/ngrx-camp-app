@@ -26,11 +26,14 @@ export class CustomPizzaPage implements OnInit {
     pizza.toppings = toppings;
     this.snackBar.open('One custom pizza added to the basket.', null, { duration: 1000, });
     this.store.dispatch(new AddToBasket(pizza));
-    this.toppings.options.forEach(a => this.deselectNonDefault(a));
+    this.toppings.options.forEach(this.deselectNonDefault);
   }
   deselectNonDefault(item: MatListOption) {
-    if ((<Topping>item.value).isDefault === false) { item.selected = false; return; }
-    item.selected = true;
+    if ((<Topping>item.value).isDefault === true) {
+      item.selected = true;
+    } else {
+      item.selected = false;
+    }
   }
   ngOnInit() {
   }
