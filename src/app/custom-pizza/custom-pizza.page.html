@@ -1,10 +1,10 @@
 <section class="mat-typography">
     <mat-selection-list #toppings>
-        <mat-list-option *ngFor="let topping of custompizzaState.toppingOptions" [value]="topping">
+        <mat-list-option *ngFor="let topping of custompizzaState.toppingOptions" [value]="topping" [selected]="topping.isDefault">
           {{topping.name}}
         </mat-list-option>
       </mat-selection-list>
-      <button mat-button (click)="addCustomPizzaToCart(toppings.selectedOptions.selected)">
+      <button mat-button (click)="addCustomPizzaToCart()">
           Add to cart
           <i class="material-icons">add_shopping_cart</i>
         </button>
