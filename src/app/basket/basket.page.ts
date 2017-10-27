@@ -7,6 +7,7 @@ import { BasketPosition } from './basket.state';
 import { SomeState } from './delivery-settings/delivery-settings.state';
 import { DataSource } from '@angular/cdk/table';
 import { CollectionViewer } from '@angular/cdk/collections';
+import { Topping } from '../custom-pizza/index';
 
 @Component({
   selector: 'app-basket',
@@ -18,7 +19,7 @@ export class BasketPage implements OnInit {
 
   basketItems: BasketPosition[];
   basketDataSource: BasketDataSource;
-  columns = ['name', 'quantity'];
+  columns = ['name', 'toppings', 'quantity'];
   constructor(private store: Store<RootState>) {
     this.store.subscribe(s => {
       this.basketItems = s.basketState.items;
@@ -28,6 +29,9 @@ export class BasketPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+  joinToppings(toppings: Topping[]) {
+    return toppings.map(a => a.name).join(', ');
   }
 
 }
