@@ -1,19 +1,22 @@
-<div class="table-container">
-  <mat-table #table [dataSource]="basketDataSource">
-    <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef> Pizza </mat-header-cell>
-      <mat-cell *matCellDef="let row"> {{row.pizza.name}} </mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="toppings">
-      <mat-header-cell *matHeaderCellDef> Toppings </mat-header-cell>
-      <mat-cell *matCellDef="let row">{{joinToppings(row.pizza.toppings)}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="quantity">
-      <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
-      <mat-cell *matCellDef="let row"> {{row.quantity}} </mat-cell>
-    </ng-container>
-    <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: columns;"></mat-row>
-  </mat-table>
+<div>
+  <p *ngIf="basketItems.length==0">No items in your basket.</p>
 </div>
-<button mat-button matStepperNext color="primary">Next</button>
+  <div *ngIf="basketItems.length!=0" class="table-container">
+    <mat-table #table [dataSource]="basketDataSource">
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Pizza </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.pizza.name}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="toppings">
+        <mat-header-cell *matHeaderCellDef> Toppings </mat-header-cell>
+        <mat-cell *matCellDef="let row">{{joinToppings(row.pizza.toppings)}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="quantity">
+        <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.quantity}} </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: columns;"></mat-row>
+    </mat-table>
+  </div>
+  <button *ngIf="basketItems.length!=0"  mat-button matStepperNext color="primary">Next</button>
