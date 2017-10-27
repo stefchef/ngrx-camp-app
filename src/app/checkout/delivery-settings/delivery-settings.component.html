@@ -1,4 +1,9 @@
-<div class="form-column">
+<div class="form-column mat-typography">
+  <p>Where should we deliver to?</p>
+  <mat-form-field>
+      <input matInput placeholder="Email">
+      <mat-error>This field is required</mat-error>
+    </mat-form-field>
   <mat-form-field>
     <input matInput placeholder="Prename">
     <mat-error>This field is required</mat-error>
@@ -18,18 +23,6 @@
   <mat-form-field>
     <input matInput placeholder="City">
     <mat-error>This field is required</mat-error>
-  </mat-form-field>
-
-  <mat-form-field>
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
-
-  <mat-form-field>
-    <mat-select placeholder="Select">
-      <mat-option value="option">Option</mat-option>
-    </mat-select>
   </mat-form-field>
   <div>
     <button mat-button matStepperPrevious>Back</button>

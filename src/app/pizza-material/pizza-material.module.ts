@@ -12,8 +12,6 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatSelectModule,
-  MatDatepickerModule,
-  MatNativeDateModule,
   MatChipsModule,
   MatTableModule
 } from '@angular/material';
@@ -32,8 +30,6 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
     MatChipsModule,
     MatTableModule,
   ],
@@ -50,8 +46,6 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
     MatChipsModule,
     MatTableModule,
   ]
