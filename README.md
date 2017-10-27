@@ -13,9 +13,18 @@ The goal of this project was to be able to use and feel confortable with the bel
 * Angular 4 CLI - Used for generation of component / modules and to run and build the application
 * Angular 4 Material - Googles UI design was used for input fields / layouts / navigation and the whole application styling.
 * ngrx - State handling and overall application architecture. Used with store and effects.
+* NodeJS
+* NPM
 
 ### Not used technologies but planned
 * ngrx forms - ngrx forms is a library which helps binding the formvalues to the store. Sadly ngrx forms is based on a different version of ngrx than the version we used.
+* Intiall it was planned to also use a backend. We have decided to not use a backend to be able focus more on all the client side affects.
+
+### Probably future additions
+* Social logins
+* ngrx forms
+* Payment over paypal (not technology relevant but would fit in the topic of ordering pizza)
+
 
 
 ## Development server
