@@ -1,5 +1,4 @@
 export enum CardType {
-    Dafault,
     Visa,
     AmericanExpress,
     Maestro,
@@ -14,7 +13,7 @@ export interface PaymentSettingsState {
     cardHolderName: string;
 }
 export const initialPaymentSettingsState: PaymentSettingsState = {
-    type: CardType.Dafault,
+    type: null,
     cardNumber: '',
     cardCode: '',
     cardDate: '',
