@@ -4,8 +4,12 @@
 body {
     padding: 0em;
     margin: 0em;
+    background: url('./assets/bupedi.png')  no-repeat;
+    background-position:30% -20%;
 }
-
+.mat-drawer-container{
+    background:none;
+}
 .count-badge {
     font-size: 12px;
     background: #7F2040;
