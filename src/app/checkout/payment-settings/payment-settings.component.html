@@ -1,3 +1,27 @@
-<p>
-  payment-settings works!
-</p>
+<div class="form-column mat-typography">
+  <p>Where should we deliver to?</p>
+  <mat-form-field>
+      <input matInput placeholder="CardType">
+      <mat-error>This field is required</mat-error>
+    </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="CardNumber">
+    <mat-error>This field is required</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="CardCode">
+    <mat-error>This field is required</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="CardDate">
+    <mat-error>This field is required</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="CardHolder">
+    <mat-error>This field is required</mat-error>
+  </mat-form-field>
+  <div>
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button matStepperNext color="primary">Next</button>
+  </div>
+</div>
