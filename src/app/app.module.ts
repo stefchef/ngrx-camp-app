@@ -15,7 +15,6 @@ import { EffectsModule } from '@ngrx/effects';
 import { rootReducer } from './app.reducer';
 import { initialRootState } from './app.reducer';
 import { HomePage } from './home/home.page';
-import { HomeModule } from './home/home.module';
 import { LayoutModule, LayoutPage } from './layout';
 import { environment } from '../environments/environment';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -39,7 +38,6 @@ import { CheckoutModule } from './checkout/checkout.module';
     RouterStoreModule.connectRouter(),
     EffectsModule.run(AppEffects),
     LayoutModule,
-    HomeModule,
     PizzasModule,
     CustomPizzaModule,
     CheckoutModule,

@@ -6,8 +6,7 @@ import { Observable } from 'rxjs/Observable';
 import { Action, Store } from '@ngrx/store';
 
 import { RootState } from './app.state';
-import { InMemoryPizzaService, InMemoryCategoryService, InMemoryToppingService } from './inMemoryDataService';
-import { LoadCategory } from './home/index';
+import { InMemoryPizzaService, InMemoryToppingService } from './inMemoryDataService';
 import { LoadPizzas } from './pizzas/pizzas.actions';
 import { LoadToppings, LoadCustomPizza } from './custom-pizza/custom-pizza.actions';
 
@@ -40,18 +39,6 @@ export class AppEffects {
             return null;
         })
         .flatMap(actions => [new LoadCustomPizza(actions)]);
-
-    @Effect()
-    loadCatgories$: Observable<Action> = this.store
-        .first()
-        .map(state => {
-            console.log('loading categories...');
-            const service = new InMemoryCategoryService();
-            const categories = service.createDb();
-
-            return categories;
-        })
-        .flatMap(actions => [new LoadCategory(actions.categories)]);
 
     @Effect()
     loadToppings$: Observable<Action> = this.store
