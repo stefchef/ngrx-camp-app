@@ -13,7 +13,8 @@ import {
   MatInputModule,
   MatSelectModule,
   MatChipsModule,
-  MatTableModule
+  MatTableModule,
+  MatSnackBarModule,
 } from '@angular/material';
 
 @NgModule({
@@ -32,6 +33,7 @@ import {
     MatSelectModule,
     MatChipsModule,
     MatTableModule,
+    MatSnackBarModule,
   ],
   declarations: [],
   exports: [
@@ -48,6 +50,7 @@ import {
     MatSelectModule,
     MatChipsModule,
     MatTableModule,
+    MatSnackBarModule,
   ]
 })
 export class PizzaMaterialModule { }
