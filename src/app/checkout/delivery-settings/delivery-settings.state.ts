@@ -6,7 +6,7 @@ export interface DeliverySettingsState {
     postalCode: number;
     city: string;
 }
-export const initialDeliverySettingsState: DeliverySettingsState{
+export const initialDeliverySettingsState: DeliverySettingsState = {
     email: '',
     prename: '',
     surname: '',
