@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-checkout',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout.page.scss']
 })
 export class CheckoutPage implements OnInit {
+  @HostBinding('class.page') true;
 
   constructor() { }
 
