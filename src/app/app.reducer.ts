@@ -4,7 +4,6 @@ import { compose } from '@ngrx/core';
 import { Action, Reducer, combineReducers } from '@ngrx/store';
 import { routerReducer } from '@ngrx/router-store';
 
-import { homeReducer } from './home/index';
 import { pizzasReducer } from './pizzas/index';
 import { customPizzaReducer } from './custom-pizza/custom-pizza.reducer';
 import { basketReducer } from './checkout/basket/index';
@@ -34,7 +33,6 @@ export function appReducer(state: AppState = initialAppState, action: Action): A
 const reducers = {
     router: routerReducer,
     appState: appReducer,
-    homeState: homeReducer,
     basketState: basketReducer,
     pizzasState: pizzasReducer,
     customPizzaState: customPizzaReducer,

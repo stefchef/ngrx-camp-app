@@ -2,7 +2,6 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { RootState } from '../app.state';
 import { Pizza } from '../pizzas/pizza/index';
-import { Category } from './categories/index';
 import { CustomPizzaState } from '../custom-pizza/index';
 
 @Component({

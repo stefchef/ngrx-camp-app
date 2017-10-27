@@ -1,6 +1,5 @@
 import { Pizza } from './pizzas/pizza/index';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Category } from './home/categories/index';
 import { Topping } from './custom-pizza/index';
 
 export class InMemoryPizzaService implements InMemoryDbService {
@@ -99,23 +98,6 @@ export class InMemoryPizzaService implements InMemoryDbService {
         const pizzas = this.createDb().pizzas.filter(p => p.categoryId === categoryId);
 
         return { pizzas };
-    }
-}
-
-export class InMemoryCategoryService implements InMemoryDbService {
-    createDb() {
-        const categories: Category[] = [
-            {
-                id: '1',
-                name: 'Pizza',
-            },
-            {
-                id: '2',
-                name: 'Wunschpizza'
-            }
-        ];
-
-        return { categories };
     }
 }
 
