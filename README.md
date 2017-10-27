@@ -3,9 +3,9 @@
 The target of this project was to get a basic knowledge of ngrx and angular 4.
 
 ## Goal
-The goal of this project was to be able to use and feel confotable with the below mentioned technologies in a project.
+The goal of this project was to be able to use and feel confortable with the below mentioned technologies in a project.
 
-## Used technologies:
+### Used technologies:
 * Html
 * Typescript
 * SASS - Was used with angular material. Not much of the sass features were actually used.
@@ -14,8 +14,9 @@ The goal of this project was to be able to use and feel confotable with the belo
 * Angular 4 Material - Googles UI design was used for input fields / layouts / navigation and the whole application styling.
 * ngrx - State handling and overall application architecture. Used with store and effects.
 
-## Not used technologies but planned
+### Not used technologies but planned
 * ngrx forms - ngrx forms is a library which helps binding the formvalues to the store. Sadly ngrx forms is based on a different version of ngrx than the version we used.
+
 
 ## Development server
 
