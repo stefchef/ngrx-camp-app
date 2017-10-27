@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { BasketPage } from './basket.page';
+import { BasketComponent } from './basket.component';
 
 export const basketRoutes: Routes = [
     {
         path: 'basket',
-        component: BasketPage,
+        component: BasketComponent,
     },
 ];

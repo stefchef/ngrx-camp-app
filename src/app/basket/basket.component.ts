@@ -11,10 +11,10 @@ import { Topping } from '../custom-pizza/index';
 
 @Component({
   selector: 'app-basket',
-  templateUrl: './basket.page.html',
-  styleUrls: ['./basket.page.scss']
+  templateUrl: './basket.component.html',
+  styleUrls: ['./basket.component.scss']
 })
-export class BasketPage implements OnInit {
+export class BasketComponent implements OnInit {
   @HostBinding('class.page') true;
 
   basketItems: BasketPosition[];
