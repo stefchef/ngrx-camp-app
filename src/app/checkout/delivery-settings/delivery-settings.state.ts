@@ -6,3 +6,11 @@ export interface DeliverySettingsState {
     postalCode: number;
     city: string;
 }
+export const initialDeliverySettingsState: DeliverySettingsState{
+    email: '',
+    prename: '',
+    surname: '',
+    postalCode: null,
+    streetAndNumber: '',
+    city: ''
+};
