@@ -1,4 +1,5 @@
 <section class="mat-typography">
+  <p>You can create your own pizza. Please select your toppings from the list below:</p>
     <mat-selection-list #toppings>
         <mat-list-option *ngFor="let topping of custompizzaState.toppingOptions" [value]="topping" [selected]="topping.isDefault">
           {{topping.name}}
