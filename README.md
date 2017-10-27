@@ -9,10 +9,10 @@ The goal of this project was to be able to use and feel confortable with the bel
 * Html
 * Typescript
 * SASS - Was used with angular material. Not much of the sass features were actually used.
-* Angular 4
+* Angular 4 (https://angular.io/)
 * Angular 4 CLI - Used for generation of component / modules and to run and build the application
-* Angular 4 Material - Googles UI design was used for input fields / layouts / navigation and the whole application styling.
-* ngrx - State handling and overall application architecture. Used with store and effects.
+* Angular 4 Material - Googles UI design was used for input fields / layouts / navigation and the whole application styling. (https://angular.io/)
+* ngrx - State handling and overall application architecture. Used with store and effects. (https://github.com/ngrx)
 * NodeJS
 * NPM
 
